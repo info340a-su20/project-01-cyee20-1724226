@@ -1,7 +1,174 @@
 p {
-  font-style: italic;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Encode Sans", sans-serif;
+}
+
+h2 {
+  font-size: 50px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 body {
-  background-color: aliceblue;
+  color: #faf3dd;
+  font-family: "Open Sans", sans-serif;
 }
+.intro {
+  margin: 1rem;
+}
+
+body {
+  background-color: #8fc0a9;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+/*******************Heading*********************/
+.headerAlign {
+  overflow: auto;
+}
+.headerButton {
+  border: none;
+  background-color: #68b0ab;
+  color: #faf3dd;
+}
+header {
+  top: 0;
+  background-color: #68b0ab;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 0.5rem;
+  left: 0;
+}
+.logo {
+  padding-left: 0.5rem;
+  max-height: 30px;
+  max-width: 30px;
+  padding-bottom: 0;
+}
+/**************Cards*******************/
+.picture:hover {
+  opacity: 50%;
+}
+.cardPool {
+  display: flex;
+  padding: 1rem;
+  padding-bottom: 0;
+  padding-top: 0.5rem;
+}
+.card {
+  position: relative;
+}
+
+.picture {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.food {
+  object-position: 50% 30%;
+}
+.shelter {
+  object-position: 50% 60%;
+}
+.health {
+  object-position: 50% 45%;
+}
+.imageText {
+  color: #faf3dd;
+  font-size: xx-large;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+
+/**************Table Panels*******************/
+table {
+  font-family: arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: left;
+  height: 2rem;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+th {
+  text-align: left;
+  height: 2rem;
+  color: #faf3dd;
+  background-color: #c8d5b9;
+  padding: 0.5em;
+}
+
+tr {
+  border-bottom: 1px solid #c8d5b9;
+}
+
+td,
+th {
+  padding: 0.5em;
+  border-bottom: 1px solid #c8d5b9;
+}
+
+caption {
+  font-size: x-large;
+}
+
+/**************Survey*******************/
+form {
+  justify-content: center;
+}
+
+/**************Screen Adjustments*******************/
+
+@media (max-width: 598px) {
+  h2 {
+    font-size: 50px;
+  }
+  p {
+    font-size: 25px;
+  }
+  .picture {
+    display: none;
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    background-color: #c8d5b9;
+    justify-content: left;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .imageText {
+    color: #faf3dd;
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    top: 0%;
+    left: 40%;
+  }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+
+/* Colors
+primary: #68b0ab;
+secondar: #8fc0a9;
+object color: #c8d5b9;
+text: #faf3dd;
+
+*/
