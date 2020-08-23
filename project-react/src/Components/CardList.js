@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../style.css";
+import CATEGORY_DATA from "../category.json";
 
 class Card extends Component {
   render() {
@@ -21,7 +22,7 @@ class Card extends Component {
 }
 class CardList extends Component {
   render() {
-    let newList = this.props.category.map((type) => {
+    let newList = CATEGORY_DATA.map((type) => {
       return <Card key={type.name} category={type} />;
     });
 

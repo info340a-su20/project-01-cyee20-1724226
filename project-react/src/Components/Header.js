@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <header>
         <button type="button" className="headerButton">
-          <img src="img/home.png" aria-hidden="true" alt="Logo Image" />
+          <img src="img/home.png" aria-hidden="true" alt="Logo" />
           <h1>Homeless Essentials</h1>
         </button>
       </header>

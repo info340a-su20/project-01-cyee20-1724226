@@ -15,12 +15,16 @@ class Content extends Component {
       <main>
         <div>
           <TableSheet />
-          <div class="intro">
+          <div className="intro">
             <p>
               Don't see a location on our list? Please share with us by clicking
               on the link to our survey!
             </p>
-            <button type="button" onClick={surveyButton}>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={surveyButton}
+            >
               Submit Request
             </button>
           </div>

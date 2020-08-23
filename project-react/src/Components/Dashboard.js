@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../style.css";
 
 import CardList from "./CardList";
-import CATEGORY_DATA from "../category.json";
 import Content from "./Content";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -62,8 +61,8 @@ class Dashboard extends Component {
         </div>
 
         <nav>
-          <a onClick={aboutButton}>About</a>
-          <a onClick={surveyButton}>Survey</a>
+          <p onClick={aboutButton}>About</p>
+          <p onClick={surveyButton}>Survey</p>
         </nav>
 
         <div id="about">
@@ -93,7 +92,7 @@ class Dashboard extends Component {
             </div>
             <div>
               <section onClick={contentButton}>
-                <CardList category={CATEGORY_DATA} />
+                <CardList />
               </section>
             </div>
             <p className="intro">
