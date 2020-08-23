@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/project-01-cyee20-1724226/project-react/static/css/main.d19ac242.chunk.css",
+    "main.js": "/project-01-cyee20-1724226/project-react/static/js/main.b6790646.chunk.js",
+    "main.js.map": "/project-01-cyee20-1724226/project-react/static/js/main.b6790646.chunk.js.map",
+    "runtime-main.js": "/project-01-cyee20-1724226/project-react/static/js/runtime-main.815b0c09.js",
+    "runtime-main.js.map": "/project-01-cyee20-1724226/project-react/static/js/runtime-main.815b0c09.js.map",
+    "static/js/2.5e6492a2.chunk.js": "/project-01-cyee20-1724226/project-react/static/js/2.5e6492a2.chunk.js",
+    "static/js/2.5e6492a2.chunk.js.map": "/project-01-cyee20-1724226/project-react/static/js/2.5e6492a2.chunk.js.map",
+    "index.html": "/project-01-cyee20-1724226/project-react/index.html",
+    "precache-manifest.12959b7e257cc3f922e8d1fed11ade2c.js": "/project-01-cyee20-1724226/project-react/precache-manifest.12959b7e257cc3f922e8d1fed11ade2c.js",
+    "service-worker.js": "/project-01-cyee20-1724226/project-react/service-worker.js",
+    "static/css/main.d19ac242.chunk.css.map": "/project-01-cyee20-1724226/project-react/static/css/main.d19ac242.chunk.css.map",
+    "static/js/2.5e6492a2.chunk.js.LICENSE.txt": "/project-01-cyee20-1724226/project-react/static/js/2.5e6492a2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.815b0c09.js",
+    "static/js/2.5e6492a2.chunk.js",
+    "static/css/main.d19ac242.chunk.css",
+    "static/js/main.b6790646.chunk.js"
+  ]
+}
