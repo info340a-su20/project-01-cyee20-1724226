@@ -4,14 +4,9 @@ import "../style.css";
 class Survey extends Component {
   render() {
     fetch("../content.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-      })
-      .catch(() => {
-        console.error("Unable to Process Request");
+      .then((text) => console.log("hello:" + text))
+      .catch((err) => {
+        console.log("Error Reading data " + err);
       });
 
     let response = [];
@@ -40,7 +35,6 @@ class Survey extends Component {
 
     function createRow(detail) {
       let firstCell = document.createElement("tr");
-
       for (let i = 0; i < detail.length; i++) {
         let cell = document.createElement("td");
         let cellText = document.createTextNode(detail[i]);
@@ -52,92 +46,104 @@ class Survey extends Component {
 
     return (
       <div className="intro">
-        <h2>Did we miss any locations? Let us know below!</h2>
-        <form id="signUpForm" className="form" noValidate>
-          <div className="form-group row">
-            <label htmlFor="category" className="col-lg-1">
-              Category
-            </label>
-            <div className="col-lg-11">
-              <input
-                type="text"
-                id="category"
-                className="form-control"
-                required
-              ></input>
-              <div className="invalid-feedback">
-                Please provide a valid email
+        <h2>Did not see a location on our list? Fill out the form below:</h2>
+        <section>
+          <form id="signUpForm" className="form" noValidate>
+            <div className="form-group row">
+              <label htmlFor="category" className="col-lg-1">
+                Category
+              </label>
+              <div className="col-lg-11">
+                <select
+                  id="category"
+                  className="form-control"
+                  name="category"
+                  required
+                >
+                  <option value="Food">Food</option>
+                  <option value="Shelter">Shelter</option>
+                  <option value="Health">Health</option>
+                </select>
+                <div className="invalid-feedback">
+                  Please provide a valid email
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="form-group row">
-            <label htmlFor="company" className="col-lg-1">
-              Company
-            </label>
-            <div className="col-lg-11">
-              <input
-                type="text"
-                id="company"
-                className="form-control"
-                required
-              ></input>
-              <div className="invalid-feedback">
-                Please provide a valid email
+            <div className="form-group row">
+              <label htmlFor="company" className="col-lg-1">
+                Company
+              </label>
+              <div className="col-lg-11">
+                <input
+                  type="text"
+                  id="company"
+                  className="form-control"
+                  required
+                ></input>
+                <div className="invalid-feedback">
+                  Please provide a valid email
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="form-group row">
-            <label htmlFor="address" className="col-lg-1">
-              Address
-            </label>
-            <div className="col-lg-11">
-              <input
-                type="text"
-                id="address"
-                className="form-control"
-                required
-              ></input>
-              <div className="invalid-feedback">
-                Please provide a valid email
+            <div className="form-group row">
+              <label htmlFor="address" className="col-lg-1">
+                Address
+              </label>
+              <div className="col-lg-11">
+                <input
+                  type="text"
+                  id="address"
+                  className="form-control"
+                  required
+                ></input>
+                <div className="invalid-feedback">
+                  Please provide a valid email
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="form-group row">
-            <label htmlFor="number" className="col-lg-1">
-              Phone Number
-            </label>
-            <div className="col-lg-11">
-              <input
-                type="text"
-                id="number"
-                className="form-control"
-                required
-              ></input>
-              <div className="invalid-feedback">
-                Please provide a valid email
+            <div className="form-group row">
+              <label htmlFor="number" className="col-lg-1">
+                Phone Number
+              </label>
+              <div className="col-lg-11">
+                <input
+                  type="text"
+                  id="number"
+                  className="form-control"
+                  required
+                ></input>
+                <div className="invalid-feedback">
+                  Please provide a valid email
+                </div>
               </div>
             </div>
+            <button
+              className="btn btn-primary"
+              id="subButton"
+              onClick={saveData}
+            >
+              Add
+            </button>
+          </form>
+        </section>
+        <section>
+          <div className="surveyTable">
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Company</th>
+                  <th>Address</th>
+                  <th>Number</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
           </div>
-          <button className="btn btn-primary" id="subButton" onClick={saveData}>
-            Add
-          </button>
-        </form>
-        <div className="surveyTable">
-          <table>
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Company</th>
-                <th>Address</th>
-                <th>Number</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
+        </section>
       </div>
     );
   }

@@ -5,6 +5,7 @@ class Survey extends Component {
   render() {
     return (
       <div className="intro">
+        <h2> About </h2>
         <p>
           Problem Description: The general topic I want to tackle in this
           project is the overflow of information on how to best help homeless

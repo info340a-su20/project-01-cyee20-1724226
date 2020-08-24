@@ -14,11 +14,13 @@ class Content extends Component {
     return (
       <main>
         <div>
-          <TableSheet />
+          <section>
+            <TableSheet />
+          </section>
           <div className="intro">
             <p>
               Don't see a location on our list? Please share with us by clicking
-              on the link to our survey!
+              on the link!
             </p>
             <button
               type="button"

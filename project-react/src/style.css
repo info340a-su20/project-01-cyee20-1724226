@@ -134,7 +134,7 @@ caption {
 }
 /**************Screen Adjustments*******************/
 
-@media (min-width: 575px) {
+@media (min-width: 576px) {
   .card-img-top {
     display: block;
   }
