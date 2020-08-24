@@ -1,5 +1,17 @@
 [
-  { "name": "Food", "class": "picture food", "img": "img/foodService.jpeg" },
-  { "name": "Shelter", "class": "picture shelter", "img": "img/housing.jpeg" },
-  { "name": "Health", "class": "picture health", "img": "img/healthCare.jpg" }
+  {
+    "name": "Food",
+    "class": "picture food",
+    "img": "foodService"
+  },
+  {
+    "name": "Shelter",
+    "class": "picture shelter",
+    "img": "housing"
+  },
+  {
+    "name": "Health",
+    "class": "picture health",
+    "img": "healthCare"
+  }
 ]

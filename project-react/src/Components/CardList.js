@@ -5,10 +5,11 @@ import CATEGORY_DATA from "../category.json";
 class Card extends Component {
   render() {
     let topic = this.props.category;
+    let pic = topic.img;
     return (
       <div className="card">
         <img
-          src={topic.img}
+          src={require("../img/" + pic + ".jpg")}
           className={"card-img-top"}
           alt={topic.name}
           aria-hidden="true"

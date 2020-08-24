@@ -3,6 +3,17 @@ import "../style.css";
 
 class Survey extends Component {
   render() {
+    fetch("../content.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch(() => {
+        console.error("Unable to Process Request");
+      });
+
     let response = [];
     let saveData = (event) => {
       event.preventDefault();
@@ -124,14 +135,7 @@ class Survey extends Component {
                 <th>Number</th>
               </tr>
             </thead>
-            <tbody>
-              {/* <tr>
-                <td>{sub.Category}</td>
-                <td>{sub.Company}</td>
-                <td>{sub.Address}</td>
-                <td>{sub.Number}</td>
-              </tr> */}
-            </tbody>
+            <tbody></tbody>
           </table>
         </div>
       </div>

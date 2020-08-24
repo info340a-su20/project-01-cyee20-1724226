@@ -72,6 +72,7 @@ nav > p {
 
 .card-img-top {
   border: 0px 0px 10px 10px;
+  display: none;
 }
 
 .card:hover {
@@ -82,6 +83,9 @@ nav > p {
   color: #faf3dd;
   text-align: center;
   margin: 0.5rem 0% 0.5rem 0%;
+}
+.card-deck {
+  margin: 0.5rem;
 }
 
 /**************Table Panels*******************/
@@ -130,36 +134,35 @@ caption {
 }
 /**************Screen Adjustments*******************/
 
-@media (max-width: 575px) {
+@media (min-width: 575px) {
   .card-img-top {
-    display: none;
-  }
-  .card-deck {
-    margin: 0.5rem;
+    display: block;
   }
 }
 
-@media (max-width: 875px) {
+@media (min-width: 875px) {
   .ending {
     font-size: 10pt;
   }
   h1 {
     font-size: 20pt;
   }
-  .card-deck {
-    margin: 0.5rem;
+
+  .card-img-top {
+    display: block;
   }
 }
 
-@media (max-width: 10000px) {
+@media (min-width: 1200px) {
   .ending {
     font-size: 12pt;
   }
   h1 {
     font-size: 25pt;
   }
-  .card-deck {
-    margin: 0.5rem;
+
+  .card-img-top {
+    display: block;
   }
 }
 
