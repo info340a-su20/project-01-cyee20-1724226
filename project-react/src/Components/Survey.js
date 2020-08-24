@@ -3,13 +3,25 @@ import "../style.css";
 
 class Survey extends Component {
   render() {
-    fetch("../content.json")
-      .then((text) => console.log("hello:" + text))
+    let userArray = [];
+    let response = [];
+
+    fetch(
+      "https://raw.githubusercontent.com/info340a-su20/project-01-cyee20-1724226/master/project-react/public/content.json"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        userArray.push(data.Category);
+        userArray.push(data.Company);
+        userArray.push(data.Address);
+        userArray.push(data.Number);
+        response.push(userArray);
+        createTable(response);
+      })
       .catch((err) => {
         console.log("Error Reading data " + err);
       });
 
-    let response = [];
     let saveData = (event) => {
       event.preventDefault();
       let newLocation = [
@@ -20,14 +32,14 @@ class Survey extends Component {
       ];
       response.push(newLocation);
       document.querySelector("form").reset();
-      console.log(response);
+      console.log("check 1 " + response);
       document.querySelector("tbody").innerHTML = "";
       createTable(response);
     };
 
     function createTable(response) {
       response.map((submission) => {
-        console.log(submission);
+        console.log("check 2 " + submission);
         let info = createRow(submission);
         return document.querySelector("tbody").appendChild(info);
       });
